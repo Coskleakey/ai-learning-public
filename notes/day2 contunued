@@ -1,0 +1,15 @@
+Matrices as Linear Transformations
+
+A matrix is best understood as:
+
+A function that takes vectors as input and outputs vectors.
+
+A matrix is completely defined by:
+
+Where it sends the basis vectors
+
+This means:
+
+Matrices reshape space
+
+They can rotate, scale, shear, or reflect vectors
