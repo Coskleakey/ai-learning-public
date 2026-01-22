@@ -1,0 +1,24 @@
+BROADCASTING EXAMPLE
+matrix = np.array([[1, 2, 3],
+                   [4, 5, 6]])
+
+vector = np.array([10, 20, 30])
+matrix + vector
+
+  import numpy as np
+
+arr = np.array([1, 2, 3])
+result = arr + 10
+print(result)
+
+  #COMMENT
+
+  What happened?
+
+10 is a scalar (shape ())
+
+NumPy broadcasts it to [10, 10, 10]
+
+No real array is created in memory
+
+  
