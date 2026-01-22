@@ -1,0 +1,21 @@
+## Day 4 – NumPy Array Shape & Reshaping
+
+Today I focused on building intuition around **array shape and reshaping** in NumPy.
+
+### Key Concepts Learned
+
+- **Shape** describes how data is structured across dimensions, not just how many dimensions exist.
+- `ndim` tells *how many axes* an array has, while `shape` tells *how many elements are in each axis*.
+- Reshaping does **not change data**, only how it is interpreted.
+- The total number of elements must remain constant when reshaping.
+
+### Example: Reshaping a 1D Array into 2D
+
+```python
+import numpy as np
+
+arr = np.array([1,2,3,4,5,6,7,8,9,10,11,12])
+reshaped = arr.reshape(4, 3)
+
+print(reshaped)
+print("Shape:", reshaped.shape)
