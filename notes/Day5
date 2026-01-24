@@ -1,0 +1,42 @@
+Day 5 – NumPy: Broadcasting, Slicing & Stacking
+
+Topics covered:
+
+1️⃣ Broadcasting
+
+Enables operations between arrays and scalars without loops
+
+arr = np.array([1, 2, 3])
+arr * 2
+
+
+Critical for performance in AI workloads
+
+2️⃣ Slicing vs Splitting
+
+Slicing: returns a view (shares memory)
+
+Splitting: returns new arrays
+
+Slicing is commonly used inside models
+
+Splitting is used for dataset preparation and batching
+
+3️⃣ Stacking Arrays
+
+np.vstack() → adds rows (stack samples)
+
+np.hstack() → adds columns (stack features)
+
+a1 = np.array([[1,1],[2,2]])
+a2 = np.array([[3,3],[4,4]])
+
+np.vstack((a1, a2))
+np.hstack((a1, a2))
+
+4️⃣ Key Takeaway
+
+AI data structures are tensors, not just matrices.
+Understanding shape manipulation is foundational for ML and DL systems.
+
+📌 Next: Reshaping with -1, tensor intuition, and mapping NumPy shapes to ML model inputs.
