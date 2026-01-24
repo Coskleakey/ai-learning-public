@@ -1,0 +1,39 @@
+# Day 6: PyTorch Tensor Initialization
+
+## Concepts Learned
+
+- **Tensor Attributes**:  
+  - `shape` → structure of tensor  
+  - `dtype` → data type / precision  
+  - `device` → CPU / GPU location  
+  - `requires_grad` → whether tensor participates in learning
+
+- **Tensor Initialization Methods**:
+  1. **Directly from data**
+     ```python
+     data = [[1, 2], [3, 4]]
+     x_data = torch.tensor(data)
+     ```
+  2. **From NumPy arrays**
+     ```python
+     np_array = np.array(data)
+     x_np = torch.from_numpy(np_array)
+     ```
+  3. **From another tensor**
+     ```python
+     x_ones = torch.ones_like(x_data)                   # same shape/dtype/device, filled with 1s
+     x_rand = torch.rand_like(x_data, dtype=torch.float) # same shape, random values, float dtype
+     ```
+
+## Key Takeaways
+
+- `*_like` functions are a **safe and flexible way to initialize tensors** for training, masks, or debugging.
+- Maintaining correct **shape, dtype, and device** prevents runtime errors.
+- Tensor initialization is foundational for **building stable neural networks**.
+
+## Next Steps
+
+- Explore `zeros_like` and `rand_like` variations.
+- Begin experimenting with **basic tensor operations**.
+- Prepare for building the **first tiny neural network**.
+
