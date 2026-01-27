@@ -1,0 +1,60 @@
+# Day 8: PyTorch Autograd (How Learning Happens)
+
+## Objective
+Understand how PyTorch automatically computes gradients for neural network training.
+
+---
+
+## 1. requires_grad
+
+```python
+x = torch.tensor(2.0, requires_grad=True)
+Building the Computational Graph
+y = x ** 2
+z = y * 3
+
+
+Each operation is recorded
+
+Graph is created dynamically at runtime
+
+3. Backpropagation
+z.backward()
+print(x.grad)
+
+
+Computes dz/dx using the chain rule
+
+Gradients are stored in .grad
+
+4. Scalar Requirement
+loss.backward()
+
+
+backward() works on scalars
+
+Loss functions reduce tensors to scalars
+
+5. Gradient Accumulation
+x.grad.zero_()
+
+
+Gradients accumulate by default
+
+Must be cleared between training steps
+
+Key Takeaways
+
+Autograd handles all derivative calculations automatically
+
+Gradients tell parameters how to change to reduce loss
+
+Backpropagation is graph traversal, not magic
+
+Next Steps
+
+Manual gradient descent
+
+Training loop structure
+
+torch.no_grad() and inference mode
